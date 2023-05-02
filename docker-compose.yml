@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nestdemo:
+    container_name: nestdemo_container
+    build: .
+    command: npm run start
+    volumes:
+      - .:/usr/src/app/nestdemo
+      - /usr/src/app/nestdemo/node_modules
+    ports:
+      - "8001:8001"
